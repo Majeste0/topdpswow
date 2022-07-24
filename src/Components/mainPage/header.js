@@ -1,7 +1,7 @@
 import React from "react";
 
-const header = () => {
-  return <div className="w-full h-[600px] text-blue"></div>;
+const Header = () => {
+  return <div className="w-full h-[600px] text-blue">Test</div>;
 };
 
-export default header;
+export default Header;
