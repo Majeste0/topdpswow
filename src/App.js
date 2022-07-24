@@ -2,7 +2,7 @@ import Header from "./Components/mainPage/header";
 
 function App() {
   return (
-    <div className="w-full">
+    <div className="w-screen h-screen bg-marron">
       <Header />
     </div>
   );
