@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         blanc: "#FFFEF9",
         marron: "#2D2A2A",
+        doré: "#DDCA1D",
       },
     },
   },
