@@ -1,42 +1,147 @@
 import React, { useState } from "react";
-import df_wp from "../../images/dragonflight_wp.jpg";
+import df_wp from "../../images/test_wp.jpg";
 import heal_wp from "../../images/heal_wp.webp";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
-
+import triangle from "../../images/traingle.png";
+import Popup from "./popup";
+import testt from "../../images/test_wp.jpg";
+import druide from "../../images/passteque.jpg";
 const Main = () => {
   const [isShown, setIsShown] = useState(false);
   const [isShown2, setIsShown2] = useState(false);
 
+  const [clickPopup, setClickPopup] = useState(false);
+
   return (
     <>
+      {console.log(clickPopup)}
+      {clickPopup ? (
+        <div>
+          <div className="w-[70%] h-[75%] z-[1000] ml-[15%] mr-[15%] mt-[1%] z-[1000] fixed flex flex-wrap shadow-[0px_0px_2px_black]">
+            <div
+              onClick={() => setClickPopup(false)}
+              className="h-[100vh] absolute w-[100vh] scale-[5.0] backdrop-blur-[2px] bg-[182px_182px_182px_0.1]"
+            ></div>
+
+            <div className=" h-[50%] w-[33.3%] relative flex justify-center items-end border-l-2 border-r border-t-2 border-b border-solid border-black hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-chaman hover:border-opacity-80 hover:shadow-[0px_0px_20px] hover:shadow-chaman">
+              <img
+                src={testt}
+                className="absolute w-full h-full object-cover"
+              ></img>
+              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl">
+                Chaman
+              </h4>
+            </div>
+            <div className="h-[50%] w-[33.3%] relative flex justify-center items-end border-l border-r border-t-2 border-b border-solid border-black hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-druide hover:border-opacity-80 hover:shadow-[0px_0px_20px] hover:shadow-druide">
+              <img
+                src={druide}
+                className="absolute w-full h-full object-cover"
+              ></img>
+
+              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl">
+                Druide
+              </h4>
+            </div>
+            <div className="h-[50%] w-[33.3%] relative flex justify-center items-end border-l border-r-2 border-t-2 border-b border-solid border-black hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-prêtre hover:border-opacity-80 hover:shadow-[0px_0px_20px] hover:shadow-prêtre">
+              <img
+                src={testt}
+                className="absolute w-full h-full object-cover"
+              ></img>
+
+              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl">
+                Prêtre
+              </h4>
+            </div>
+            <div className=" h-[50%] w-[33.3%] relative flex justify-center items-end border-l-2 border-r border-t border-b-2 border-solid border-black hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-moine hover:border-opacity-80 hover:shadow-[0px_0px_20px] hover:shadow-moine">
+              <img
+                src={testt}
+                className="absolute w-full h-full object-cover"
+              ></img>
+
+              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl">
+                Moine
+              </h4>
+            </div>
+            <div className=" h-[50%] w-[33.3%] relative flex justify-center items-end border-l border-r border-t border-b-2 border-solid border-black hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-paladin hover:border-opacity-80 hover:shadow-[0px_0px_20px_] hover:shadow-paladin">
+              <img
+                src={testt}
+                className="absolute w-full h-full object-cover"
+              ></img>
+
+              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl">
+                Paladin
+              </h4>
+            </div>
+            <div className=" h-[50%] w-[33.3%] relative flex justify-center items-end border-inset border-l border-r-2 border-t border-b-2 border-black hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-evocateur hover:border-opacity-80 hover:shadow-[0px_0px_20px] hover:shadow-evocateur">
+              <img
+                src={testt}
+                className="absolute w-full h-full object-cover"
+              ></img>
+
+              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl">
+                Evocateur
+              </h4>
+            </div>
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
       <div className="flex h-full justify-around overflow-hidden">
         <div className="relative w-full cursor-pointer overflow-hidden">
           <div
-            className="h-full"
+            className={isShown === true ? "h-full " : "h-full "}
             onMouseEnter={() => setIsShown(true)}
             onMouseLeave={() => setIsShown(false)}
+            onClick={() => setClickPopup(true)}
           >
             <img
               src={df_wp}
               alt="healwp"
               className={
                 isShown === true
-                  ? "w-full h-full object-cover cursor-pointer transition ease-in-out scale-110 duration-300"
-                  : "w-full h-full object-cover cursor-pointer opacity-50"
+                  ? "w-full h-full object-cover cursor-pointer  transition ease-in-out scale-105 duration-300"
+                  : "w-full h-full object-cover cursor-pointer opacity-50 "
               }
             />
-            <div>
-              <h3 className="cursor-pointer text-white absolute text-center w-full top-[40%] font-goldman text-2xl ">
+            <div
+              className={
+                isShown === true
+                  ? " h-[20%] w-full fit-content absolute top-[45%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center bg-opacity-80 transition linear bg-doré duration-[00ms]"
+                  : " h-[20%] w-full fit-content absolute top-[45%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center"
+              }
+            >
+              <img
+                src={triangle}
+                alt="triangle"
+                className={
+                  isShown === true
+                    ? " h-[15%] w-fit mr-[50%] ml-[50%] animate-bounce"
+                    : " h-[15%] w-fit mr-[50%] ml-[50%] invert"
+                }
+              />
+
+              <h3
+                className={
+                  isShown === true
+                    ? "cursor-pointer text-black w-full top-[40%] text-center font-goldman text-2xl "
+                    : "cursor-pointer text-white w-full top-[40%] text-center font-goldman text-2xl "
+                }
+              >
                 GUIDES DE CLASSE
               </h3>
-              <p className="cursor-pointer text-white absolute w-[50%] left-[25%] top-[45%] text-center font-poppins text-base">
+              <p
+                className={
+                  isShown === true
+                    ? "cursor-pointer text-black leading-4 w-[50%]  ml-[25%] font-poppins text-base text-center "
+                    : "cursor-pointer text-white leading-4 w-[50%]  ml-[25%] font-poppins text-base text-center "
+                }
+              >
                 Apprend à maîtriser ton personnage sur le bout des doigts
               </p>
             </div>
           </div>
         </div>
-        <div className="w-[2px] h-full bg-doré fixed z-1"></div>;
+        <div className="w-[4px] h-full bg-doré fixed z-1 opacity-80"></div>;
         <div
           className="w-full relative cursor-pointer overflow-hidden "
           onMouseEnter={() => setIsShown2(true)}
@@ -48,15 +153,42 @@ const Main = () => {
               alt="healwp"
               className={
                 isShown2 === true
-                  ? "w-full h-full object-cover cursor-pointer transition ease-in-out scale-110 duration-300"
+                  ? "w-full h-full object-cover cursor-pointer transition ease-in-out scale-105 duration-300"
                   : "w-full h-full object-cover cursor-pointer opacity-50"
               }
             />
-            <div>
-              <h3 className="cursor-pointer text-white absolute text-center w-full top-[40%] font-goldman text-2xl">
+            <div
+              className={
+                isShown2 === true
+                  ? " h-[20%] w-full fit-content absolute top-[45%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center bg-opacity-80 transition linear bg-doré duration-[00ms]"
+                  : " h-[20%] w-full fit-content absolute top-[45%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center"
+              }
+            >
+              <img
+                src={triangle}
+                alt="triangle"
+                className={
+                  isShown2 === true
+                    ? " h-[15%] w-fit mr-[50%] ml-[50%] animate-bounce"
+                    : " h-[15%] w-fit mr-[50%] ml-[50%] invert"
+                }
+              />
+              <h3
+                className={
+                  isShown2 === true
+                    ? "cursor-pointer text-black w-full top-[40%] text-center font-goldman text-2xl "
+                    : "cursor-pointer text-white w-full top-[40%] text-center font-goldman text-2xl "
+                }
+              >
                 OPTIMISATIONS
               </h3>
-              <p className="cursor-pointer text-white absolute w-[50%] left-[25%] top-[45%] text-center font-poppins text-base">
+              <p
+                className={
+                  isShown2 === true
+                    ? "cursor-pointer text-black leading-4 w-[50%]  ml-[25%] font-poppins text-base text-center"
+                    : "cursor-pointer text-white leading-4 w-[50%]  ml-[25%] font-poppins text-base text-center"
+                }
+              >
                 Découvre des astuces pour t'optimiser avant de partir en
                 instances
               </p>
