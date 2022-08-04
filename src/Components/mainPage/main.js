@@ -5,6 +5,12 @@ import triangle from "../../images/traingle.png";
 import Popup from "./popup";
 import testt from "../../images/test_wp.jpg";
 import druide from "../../images/passteque.jpg";
+import chaman from "../../images/chaman.jpg";
+import pretre from "../../images/pretre.webp";
+import moine from "../../images/Moine.webp";
+import paladin from "../../images/paladin.webp";
+import evocateur from "../../images/paladin.webp";
+
 const Main = () => {
   const [isShown, setIsShown] = useState(false);
   const [isShown2, setIsShown2] = useState(false);
@@ -16,69 +22,69 @@ const Main = () => {
       {console.log(clickPopup)}
       {clickPopup ? (
         <div>
-          <div className="w-[70%] h-[75%] z-[1000] ml-[15%] mr-[15%] mt-[1%] z-[1000] fixed flex flex-wrap shadow-[0px_0px_2px_black]">
+          <div className=" z-[1000] w-full h-[90%] fixed flex justify-evenly items-center shadow-[0px_0px_2px_black]">
             <div
               onClick={() => setClickPopup(false)}
               className="h-[100vh] absolute w-[100vh] scale-[5.0] backdrop-blur-[2px] bg-[182px_182px_182px_0.1]"
             ></div>
 
-            <div className=" h-[50%] w-[33.3%] relative flex justify-center items-end border-l-2 border-r border-t-2 border-b border-solid border-black hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-chaman hover:border-opacity-80 hover:shadow-[0px_0px_20px] hover:shadow-chaman">
+            <div className=" h-[15vw] w-[15vw] rounded-[50%] relative flex justify-center items-end border-l-2 border-r border-t-2 border-b border-solid border-black grayscale hover:opacity-[100%] hover:grayscale-[0%] hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-chaman hover:border-opacity-80 hover:shadow-[0px_0px_20px] hover:shadow-chaman ">
               <img
-                src={testt}
-                className="absolute w-full h-full object-cover"
+                src={chaman}
+                className="absolute opacity-[85%] w-full h-full object-cover rounded-[50%]"
               ></img>
-              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl">
-                Chaman
+              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl drop-shadow-[0_0_2px_#000]">
+                CHAMAN
               </h4>
             </div>
-            <div className="h-[50%] w-[33.3%] relative flex justify-center items-end border-l border-r border-t-2 border-b border-solid border-black hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-druide hover:border-opacity-80 hover:shadow-[0px_0px_20px] hover:shadow-druide">
+            <div className="h-[15vw] w-[15vw] rounded-[50%] relative flex justify-center items-end border-l border-r border-t-2 border-b border-solid border-black grayscale hover:opacity-[100%] hover:grayscale-[0%] hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-druide hover:border-opacity-80 hover:shadow-[0px_0px_20px] hover:shadow-druide">
               <img
                 src={druide}
-                className="absolute w-full h-full object-cover"
+                className="absolute   opacity-[85%] w-full h-full object-cover rounded-[50%]"
               ></img>
 
-              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl">
-                Druide
+              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl drop-shadow-[0_0_2px_#000]">
+                DRUIDE
               </h4>
             </div>
-            <div className="h-[50%] w-[33.3%] relative flex justify-center items-end border-l border-r-2 border-t-2 border-b border-solid border-black hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-prêtre hover:border-opacity-80 hover:shadow-[0px_0px_20px] hover:shadow-prêtre">
+            <div className="h-[15vw] w-[15vw] rounded-[50%] relative flex justify-center items-end border-l border-r-2 border-t-2 border-b border-solid border-black  grayscale hover:opacity-[100%] hover:grayscale-[0%] hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-prêtre hover:border-opacity-80 hover:shadow-[0px_0px_20px] hover:shadow-prêtre">
               <img
-                src={testt}
-                className="absolute w-full h-full object-cover"
+                src={pretre}
+                className="absolute  opacity-[85%] w-full h-full object-cover rounded-[50%]"
               ></img>
 
-              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl">
-                Prêtre
+              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl drop-shadow-[0_0_2px_#000]">
+                PRÊTRE
               </h4>
             </div>
-            <div className=" h-[50%] w-[33.3%] relative flex justify-center items-end border-l-2 border-r border-t border-b-2 border-solid border-black hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-moine hover:border-opacity-80 hover:shadow-[0px_0px_20px] hover:shadow-moine">
+            <div className="h-[15vw] w-[15vw] rounded-[50%] relative flex justify-center items-end border-l-2 border-r border-t border-b-2 border-solid border-black grayscale hover:opacity-[100%] hover:grayscale-[0%] hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-moine hover:border-opacity-80 hover:shadow-[0px_0px_20px] hover:shadow-moine">
               <img
-                src={testt}
-                className="absolute w-full h-full object-cover"
+                src={moine}
+                className="absolute  opacity-[85%] w-full h-full object-cover rounded-[50%]"
               ></img>
 
-              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl">
-                Moine
+              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl drop-shadow-[0_0_2px_#000]">
+                MOINE
               </h4>
             </div>
-            <div className=" h-[50%] w-[33.3%] relative flex justify-center items-end border-l border-r border-t border-b-2 border-solid border-black hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-paladin hover:border-opacity-80 hover:shadow-[0px_0px_20px_] hover:shadow-paladin">
+            <div className="h-[15vw] w-[15vw] rounded-[50%] relative flex justify-center items-end border-l border-r border-t border-b-2 border-solid border-black grayscale hover:opacity-[100%] hover:grayscale-[0%] hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-paladin hover:border-opacity-80 hover:shadow-[0px_0px_20px_] hover:shadow-paladin">
               <img
-                src={testt}
-                className="absolute w-full h-full object-cover"
+                src={paladin}
+                className="absolute opacity-[85%]  w-full h-full object-cover rounded-[50%]"
               ></img>
 
-              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl">
-                Paladin
+              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl drop-shadow-[0_0_2px_#000]">
+                PALADIN
               </h4>
             </div>
-            <div className=" h-[50%] w-[33.3%] relative flex justify-center items-end border-inset border-l border-r-2 border-t border-b-2 border-black hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-evocateur hover:border-opacity-80 hover:shadow-[0px_0px_20px] hover:shadow-evocateur">
+            <div className=" h-[15vw] w-[15vw] rounded-[50%]  relative flex justify-center items-end border-inset border-l border-r-2 border-t border-b-2 border-black grayscale hover:opacity-[100%] hover:grayscale-[0%] hover:scale-[1.1] hover:z-[1] hover:border-2 hover:border-evocateur hover:border-opacity-80 hover:shadow-[0px_0px_20px] hover:shadow-evocateur">
               <img
                 src={testt}
-                className="absolute w-full h-full object-cover"
+                className="absolute opacity-[85%] w-full h-full object-cover rounded-[50%]"
               ></img>
 
-              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl">
-                Evocateur
+              <h4 className="z-[1] mb-[5%] font-goldman text-white text-xl drop-shadow-[0_0_2px_#000]">
+                EVOCATEUR
               </h4>
             </div>
           </div>

@@ -8,6 +8,14 @@ module.exports = {
       goldman: ["Goldman"],
     },
     extend: {
+      keyframes: {
+        moveShadow: {
+          "50%": { shadow: "0px 0px 20px #fff" },
+        },
+      },
+      animation: {
+        moveShadow: "moveShadow 5s infinite",
+      },
       boxShadow: {
         cool: "200px 200px 600px 300px inset #DDCA1D ",
       },
@@ -22,6 +30,11 @@ module.exports = {
         evocateur: "#33937F",
         moine: "#00FF98",
       },
+    },
+  },
+  variants: {
+    extend: {
+      animation: ["hover", "group-hover"],
     },
   },
   plugins: [],
